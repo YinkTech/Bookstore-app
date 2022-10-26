@@ -2,8 +2,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       React Redux file setup
-       Setup complete
+       <h1>React Bookstore</h1>
       </header>
     </div>
   );
