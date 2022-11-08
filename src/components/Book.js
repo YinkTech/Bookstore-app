@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropTypes } from 'react';
+import { PropTypes } from 'Prop-Types';
 
 const Book = ({book}) => {
   return (
