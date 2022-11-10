@@ -1,15 +1,14 @@
-import React from "react";
-import Booksform from "../containers/BooksForm";
-import Bookslist from "../containers/BooksList";
+import React from 'react'
+import { BooksList } from './../containers/BooksList'
+import { BooksForm } from './../containers/BooksForm'
 
-
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Bookslist />
-      <Booksform />
+      <BooksList />
+      <BooksForm />
     </div>
-  );
+  )
 }
 
 export default App;

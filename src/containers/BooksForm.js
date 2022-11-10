@@ -3,7 +3,7 @@ import Select from 'react-select';
 
 const Categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
 
-const Booksform = () => {
+export const BooksForm = () => {
   return (
     <div>
       <form>
@@ -30,4 +30,3 @@ const Booksform = () => {
   );
 };
 
-export default Booksform;

@@ -1,19 +1,12 @@
+import React from 'react';
+import Book from './../components/Book';
 
-import { Provider } from "react-redux";
-const store = createStore(routerReducer)
+export const BooksList = () => {
 
-ReactDOM.render (
-  <Provider store={store}>
-        <>
-          <table>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Category</th>
-            </tr>
-          </table>
-        </>
-  </Provider>
-);
+  return (
+    <table>
+        <Book id='id' title='title' category='category' />
+    </table>
+  );
+};
 
-export default Bookslist;
