@@ -1,17 +1,34 @@
-import React from 'react'
-import Select from 'react-select';
+import React from "react";
+import Select, { components } from "react-select";
+import { Component } from "react";
 
-const Categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
+const Categories = [
+  "Action",
+  "Biography",
+  "History",
+  "Horror",
+  "Kids",
+  "Learning",
+  "Sci-Fi",
+];
 
-export const BooksForm = () => {
-  return (
-    <div>
+class BooksForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      title: '',
+      category: '',
+    }
+  }
+
+  render() {
+    return (
       <form>
         <label htmlFor="title">Title</label>
-        <input id="title" type="text"></input>
+        <input id="title" value="title" type="text"></input>
 
         <label>
-            Categories
+          Categories
           <select htmlFor>
             <option value="Action">Action</option>
             <option value="Biography">Biography</option>
@@ -24,9 +41,10 @@ export const BooksForm = () => {
             <option value="Sci-Fi">Sci-Fi</option>
           </select>
         </label>
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
-    </div>
-  );
-};
+    );
+  }
+}
 
+export default BooksForm
