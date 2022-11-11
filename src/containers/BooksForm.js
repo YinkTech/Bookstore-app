@@ -14,18 +14,26 @@ const Categories = [
 
 class BooksForm extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      title: '',
-      category: '',
-    }
+      title: "",
+      category: "",
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
 
   render() {
+    const { title } = this.state;
     return (
       <form>
         <label htmlFor="title">Title</label>
-        <input id="title" value="title" type="text"></input>
+        <input id="title" value={title} onChange={handleChange} type="text"></input>
 
         <label>
           Categories
