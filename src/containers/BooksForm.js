@@ -1,30 +1,32 @@
 import React from 'react'
-import Select from 'react-select';
 
-const Categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
+const Categories = [
+  { category: "Select Category" },
+  { category: "Action" },
+  { category: "Biography" },
+  { category: "History" },
+  { category: "Horror" },
+  { category: "Kids" },
+  { category: "Learning" },
+  { category: "Sci-Fi" },
+];
 
 export const BooksForm = () => {
   return (
     <div>
       <form>
         <label htmlFor="title">Title</label>
-        <input id="title" type="text"></input>
+        <input id="title" type="category"></input>
 
         <label>
-            Categories
-          <select htmlFor>
-            <option value="Action">Action</option>
-            <option value="Biography">Biography</option>
-            <option selected value="History">
-              History
-            </option>
-            <option value="Horror">Horror</option>
-            <option value="Kids">Kids</option>
-            <option value="Learning">Learning</option>
-            <option value="Sci-Fi">Sci-Fi</option>
+          Categories
+          <select name="categories" id="categories">
+            {Categories.map((option, index) => (
+              <option key={index}>{option.category}</option>
+            ))}
           </select>
         </label>
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
