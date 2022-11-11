@@ -3,13 +3,14 @@ import Select, { components } from "react-select";
 import { Component } from "react";
 
 const Categories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi",
+  { category: "Select Category" },
+  { category: "Action" },
+  { category: "Biography" },
+  { category: "History" },
+  { category: "Horror" },
+  { category: "Kids" },
+  { category: "Learning" },
+  { category: "Sci-Fi" },
 ];
 
 class BooksForm extends Component {
@@ -21,32 +22,35 @@ class BooksForm extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  handleSubmit() {
+
   }
 
   render() {
     const { title } = this.state;
     return (
-      <form>
+      <form onSubmit={this.state.handleSubmit}>
         <label htmlFor="title">Title</label>
-        <input id="title" value={title} onChange={handleChange} type="text"></input>
+        <input
+          id="title"
+          value={title}
+          onChange={handleChange}
+          type="text"
+        ></input>
 
         <label>
           Categories
-          <select htmlFor>
-            <option value="Action">Action</option>
-            <option value="Biography">Biography</option>
-            <option selected value="History">
-              History
-            </option>
-            <option value="Horror">Horror</option>
-            <option value="Kids">Kids</option>
-            <option value="Learning">Learning</option>
-            <option value="Sci-Fi">Sci-Fi</option>
+          <select name="categories" id="categories">
+            {Categories.map((option, index) => (
+              <option key={index}>{option.category}</option>
+            ))}
           </select>
         </label>
         <button type="submit">Submit</button>
