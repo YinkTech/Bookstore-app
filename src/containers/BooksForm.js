@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Categories = [
   { category: "Select Category" },
@@ -31,4 +31,3 @@ export const BooksForm = () => {
     </div>
   );
 };
-
