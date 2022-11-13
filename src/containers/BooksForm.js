@@ -1,8 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import { Component } from "react";
-=======
->>>>>>> 6c77d639e4d8c6394ced6cc4b4a96de9d1246b3d
 
 const Categories = [
   { category: "Select Category" },
