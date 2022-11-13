@@ -8,8 +8,7 @@ const bookReducer = (state = initialState, action) => {
       return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;
-  }
+  };
+};
 
-}
-
-export default bookReducer
+export default bookReducer;

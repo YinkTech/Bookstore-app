@@ -1,5 +1,4 @@
 import React from "react";
-import Select, { components } from "react-select";
 import { Component } from "react";
 
 const Categories = [
@@ -14,27 +13,57 @@ const Categories = [
 ];
 
 class BooksForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: "",
-      category: "",
-    };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     title: "",
+  //     category: "",
+  //   };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  //   this.handleChange = this.handleChange.bind(this);
+  //   this.handleSubmit = this.handleSubmit.bind(this);
+  // }
+
+  // handleChange(event) {
+  //   this.setState({ [event.target.name]: event.target.value });
+  // }
+
+  // handleSubmit() {
+
+  // }
+
+  state = {
+    title: '',
+    category: ''
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
-  }
+  handleChange = event => {
+    this.setState({
+      title: event.target.value,
+      category: event.target.value
+    });
+  };
 
-  handleSubmit() {
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log("Book being added: ", this.state.title, this.state.category);
 
+    this.props.addbook(
+      this.state.title,
+      this.state.category
+    );
+    
+    this.setState({ 
+      title: '',
+      category: ''
+    });
   }
 
   render() {
-    const { title } = this.state;
+    // const { title } = this.state;
+    const renderBooks = () => this.props.books.map(
+      todo => <li key={todo}>{todo}</li>
+      );
     return (
       <form onSubmit={this.state.handleSubmit}>
         <label htmlFor="title">Title</label>
@@ -58,5 +87,6 @@ class BooksForm extends Component {
     );
   }
 }
+
 
 export default BooksForm
