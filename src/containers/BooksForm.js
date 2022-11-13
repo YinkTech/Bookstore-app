@@ -84,15 +84,9 @@ class BooksForm extends Component {
         </label>
         <button type="submit">Submit</button>
       </form>
-<<<<<<< HEAD
     );
   }
 }
 
 
 export default BooksForm
-=======
-    </div>
-  );
-};
->>>>>>> 6c77d639e4d8c6394ced6cc4b4a96de9d1246b3d
