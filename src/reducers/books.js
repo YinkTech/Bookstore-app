@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 export const initialState = [
   {
     id: uuidv4(),
-    title: 'Twice',
-    category: 'fantasy',
+    title: 'black panther',
+    category: 'Action',
   },
   {
     id: uuidv4(),
