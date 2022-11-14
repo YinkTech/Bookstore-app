@@ -13,6 +13,21 @@ const Categories = [
 ];
 
 class BooksForm extends Component {
+  state = {
+    title: '',
+    category: ''
+  }
+
+  handleChange = event => {
+    this.setState({
+      title: event.target.value,
+      category: event.target.value
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+  }
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -31,11 +46,6 @@ class BooksForm extends Component {
   // handleSubmit() {
 
   // }
-
-  state = {
-    title: '',
-    category: ''
-  }
 
   handleChange = event => {
     this.setState({
