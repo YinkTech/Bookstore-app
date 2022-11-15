@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { createBook } from '../actions';
-=======
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
-import { createBook } from "../actions";
->>>>>>> db897a2a6cd7dd0a09466096f9f3d1fff1a8a632
 
 const Categories = [
   { category: "Select Category" },
