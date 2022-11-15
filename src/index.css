@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+table {
+    margin: 10px;
+}
+
+tr {
+    width: fit-content;
+    text-align: start;
+}
