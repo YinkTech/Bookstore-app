@@ -1,25 +1,26 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-import { removeBook } from './../actions/index';
+import React from "react";
+import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
+import { removeBook } from "./../actions/index";
 
 const Book = ({ book }) => {
-
   const dispatch = useDispatch();
 
   const deleteBook = (book) => {
     dispatch(removeBook(book));
   };
-  
-return(
-  <tr key={book.id}>
-    <td>{book.title}</td>
-    <td>{book.category}</td>
-    <td>
-      <button type="button" onClick={() => deleteBook(book)}>Remove</button>
-    </td>
-  </tr>
-);
+
+  return (
+    <tr key={book.id}>
+      <td>{book.title}</td>
+      <td>{book.category}</td>
+      <td>
+        <button type="button" onClick={() => deleteBook(book)}>
+          Remove
+        </button>
+      </td>
+    </tr>
+  );
 };
 
 Book.propTypes = {
