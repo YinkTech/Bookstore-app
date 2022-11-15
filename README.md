@@ -5,11 +5,10 @@ REACT & REDUX
 
 ## Live Demo
 
-[Github](https://yinktech.github.io/Bookstore-app/)
-[Heroku](https://book-store-redux-app.herokuapp.com/)
+[Github]()
+[Heroku]()
 
-## Calculator Page
-![screenshot](./img/screenshot.png)
+## Bookstore Page
 
 
 # Getting Started with Create React App

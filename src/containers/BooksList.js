@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from './../actions/index';
 
 export const BooksList = () => {
-
   const books = useSelector((state) => state.bookReducer);
 
   const dispatch = useDispatch();
