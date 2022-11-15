@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { createBook } from '../actions';
@@ -16,11 +15,13 @@ const Categories = [
 ];
 
 export const BooksForm = () => {
+
   const dispatch = useDispatch();
-  const [title, setInputTitle] = useState('');
-  const [category, setInputCategory] = useState('');
-  const onTitleChange = (e) => setInputTitle((e.target.value));
-  const onCategoryChange = (e) => setInputCategory((e.target.value));
+  
+  const [title, titleInput] = useState('');
+  const [category, categoryInput] = useState('');
+  const handleChange = (e) => titleInput((e.target.value));
+  const onCategoryChange = (e) => categoryInput((e.target.value));
 
   const handleSubmit = (e) => {
     const book = {
@@ -30,8 +31,8 @@ export const BooksForm = () => {
     };
     dispatch(createBook(book));
     e.preventDefault();
-    setInputTitle('');
-    setInputCategory('');
+    titleInput('');
+    categoryInput('');
   };
 
   return (
@@ -40,7 +41,7 @@ export const BooksForm = () => {
           <input
             id="title"
             type="text"
-            value={title} onChange={onTitleChange}
+            value={title} onChange={handleChange}
           />
 
           <label>
@@ -55,5 +56,3 @@ export const BooksForm = () => {
         </form>
   );
 };
-
-
