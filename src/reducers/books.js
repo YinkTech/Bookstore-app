@@ -1,14 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from "./../actions/index";
-import { v4 as uuidv4 } from 'uuid';
 
-export const initialState = [
-  {
-    id: uuidv4(),
-    title: '',
-    category: '',
-  },
-];
-
+const initialState = [];
 export const bookReducer = (state = initialState, action) => {
     switch (action.type) {
       case CREATE_BOOK:

@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 export const BooksList = () => {
 
   const books = useSelector((state) => state.bookReducer);
+
   return (
     <table>
       <thead>
@@ -18,8 +19,7 @@ export const BooksList = () => {
       {books.map((book) => (
           <Book
           key={book.id}
-          title={book.title}
-          category={book.category}
+          book={book}
         />
       ))}
       </tbody>
