@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { createBook } from '../actions';
 
 const Categories = [
   { category: "Select Category" },
@@ -12,22 +15,49 @@ const Categories = [
 ];
 
 export const BooksForm = () => {
-  return (
-    <div>
-      <form>
-        <label htmlFor="title">Title</label>
-        <input id="title" type="category"></input>
 
-        <label>
-          Categories
-          <select name="categories" id="categories">
-            {Categories.map((option, index) => (
-              <option key={index}>{option.category}</option>
-            ))}
-          </select>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+  const dispatch = useDispatch();
+  
+  const [title, titleInput] = useState('');
+  const [category, categoryInput] = useState('');
+  const handleChange = (e) => titleInput((e.target.value));
+  const handleChangeCategory = (e) => categoryInput((e.target.value));
+
+  const handleSubmit = (e) => {
+    const book = {
+      id: uuidv4(),
+      title,
+      category,
+    };
+    dispatch(createBook(book));
+    e.preventDefault();
+    titleInput('');
+    categoryInput('');
+  };
+
+  return (
+      <form onSubmit={handleSubmit}>
+          <label htmlFor="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            value={title} onChange={handleChange}
+          />
+
+      <label>
+        Categories
+        <select
+          name="categories"
+          id="categories"
+          value={category}
+          onChange={handleChangeCategory}
+        >
+          {Categories.map((option, index) => (
+            <option key={index}>{option.category}</option>
+          ))}
+        </select>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
   );
 };

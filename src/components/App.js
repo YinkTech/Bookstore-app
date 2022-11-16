@@ -1,6 +1,6 @@
-import React from 'react'
-import { BooksList } from './../containers/BooksList'
-import { BooksForm } from './../containers/BooksForm'
+import React from "react";
+import { BooksList } from "./../containers/BooksList";
+import { BooksForm } from "./../containers/BooksForm";
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <BooksForm />
       <BooksList />
     </div>
-  )
-}
+  );
+};
 
 export default App;
