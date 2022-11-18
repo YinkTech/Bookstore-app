@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #e8e8e8;
+  background: #fafafa;
 }
 
 .nav {
@@ -48,14 +48,47 @@ body {
   color: #379cf6;
 }
 
-table {
+.card-list {
   margin: 50px;
 }
 
 .section {
-  margin: 30px;
-  border: 1px solid #000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e8e8e8;
   padding: 30px;
+}
+
+.list-sec {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.session-check {
+  flex: 1;
+}
+
+.session-check ul {
+  list-style: none;
+}
+
+.session-check ul li {
+  color: #5a5959;
+}
+
+.session-check ul li:first-child {
+  color: #c4c4c4;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.session-check ul li:last-child button {
+  padding: 10px;
+  width: fit-content;
+  margin-top: 10px;
 }
 
 .separator {
@@ -122,4 +155,91 @@ form {
   background: #379cf6;
   flex: 1;
   font-weight: bold;
+}
+
+.comm-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.comm-list li {
+  margin-right: 20px;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 10px;
+  color: #0290ff;
+}
+
+.comm-list li:last-child {
+  border: none;
+}
+
+.bookcategory {
+  color: #9c9c9c;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  padding: 0;
+}
+
+.booktitle {
+  font-size: 30px;
+  color: #121212;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 859px) {
+  .logo {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .links a {
+    font-size: 16px;
+  }
+
+  .bi-person-circle {
+    display: none;
+  }
+
+  .card-list {
+    margin: 10px;
+  }
+
+  .section {
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .progress {
+    width: 6rem;
+  }
+
+  .session-check ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-sort {
+    flex-direction: column;
+  }
+
+  .input-title {
+    margin-bottom: 20px;
+  }
+
+  .input-cate {
+    width: max-content;
+    margin-bottom: 20px;
+  }
+
+  .submit {
+    padding: 10px;
+  }
 }

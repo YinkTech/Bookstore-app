@@ -1,0 +1,95 @@
+.prog-con {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.progress {
+  width: 10rem;
+  border-right: solid 1px #e8e8e8;
+  margin-right: 2.68rem;
+}
+
+.text {
+  flex-direction: column;
+  align-items: flex-start;
+  color: #121212;
+}
+
+.percent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+.status {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+}
+
+.progress-circle {
+  font-size: 20px;
+  margin: 20px;
+  position: relative;
+  padding: 0;
+  width: 5em;
+  height: 5em;
+  background-color: #F2E9E1; 
+  border-radius: 50%;
+  line-height: 5em;
+}
+
+.progress-circle:after {
+  border: none;
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 4.3em;
+  height: 4.3em;
+  background-color: white;
+  content: " ";
+}
+
+.left-half-clipper {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  clip: rect(0, 5em, 5em, 2.5em);
+}
+
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto,auto,auto,auto);
+}
+
+.value-bar {
+  position: absolute;
+  clip: rect(0, 2.5em, 5em, 0);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.45em solid #0290ff;
+  box-sizing: border-box;
+}
+
+.progress-circle.over50 .first50-bar {
+  position: absolute;
+  clip: rect(0, 5em, 5em, 2.5em);
+  background-color: #0290ff;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+}
+
+.progress-circle:not(.over50) .first50-bar{ display: none; }
+
+.progress-circle.p100 .value-bar { transform: rotate(230deg); }
+ 

@@ -1,5 +1,5 @@
 # Bookstore
-> 
+> This is a React-Redux app to store movies and place them in a different categories
 ## Built With 
 REACT & REDUX 
 
@@ -9,8 +9,7 @@ REACT & REDUX
 [Heroku]()
 
 ## Bookstore Page
-
-
+![screenshot](./src/img/shot.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

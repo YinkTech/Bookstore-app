@@ -1,9 +1,10 @@
 import React from 'react'
+import "./styles/categories.css"
 
 export const Category = () => {
   return (
-    <div>
-      <h2>This are the categories Available</h2>
+    <div className='cate-con'>
+      <h2 className='cate-lead'>This are the categories Available</h2>
       <ul>
         <li>Action</li>
         <li>Biography</li>

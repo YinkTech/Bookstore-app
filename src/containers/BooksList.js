@@ -14,8 +14,7 @@ export const BooksList = () => {
   };
 
   return (
-    <table>
-      <tbody>
+      <div className='card-list'>
         {books.map((book) => (
             <Book
             className='section'
@@ -24,7 +23,6 @@ export const BooksList = () => {
             deleteBook={() => handleRemoveBook(book)}
           />
         ))}
-      </tbody>
-    </table>
+      </div>
   );
 };
