@@ -119,7 +119,6 @@ form {
 .form-sort {
   display: flex;
   justify-content: space-between;
-
   font-weight: bold;
 }
 
