@@ -39,12 +39,12 @@
   padding: 0;
   width: 5em;
   height: 5em;
-  background-color: #F2E9E1; 
+  background-color: #f2e9e1;
   border-radius: 50%;
   line-height: 5em;
 }
 
-.progress-circle:after {
+.progress-circle::after { 
   border: none;
   position: absolute;
   top: 0.35em;
@@ -67,7 +67,7 @@
 }
 
 .progress-circle.over50 .left-half-clipper {
-  clip: rect(auto,auto,auto,auto);
+  clip: rect(auto, auto, auto, auto);
 }
 
 .value-bar {
@@ -89,7 +89,6 @@
   height: 5em;
 }
 
-.progress-circle:not(.over50) .first50-bar{ display: none; }
+.progress-circle:not(.over50) .first50-bar { display: none; }
 
 .progress-circle.p100 .value-bar { transform: rotate(230deg); }
- 

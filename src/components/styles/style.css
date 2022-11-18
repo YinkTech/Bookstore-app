@@ -75,6 +75,17 @@ body {
   list-style: none;
 }
 
+.comm-list li {
+  margin-right: 20px;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 10px;
+  color: #0290ff;
+}
+
+.comm-list li:last-child {
+  border: none;
+}
+
 .session-check ul li {
   color: #5a5959;
 }
@@ -161,17 +172,6 @@ form {
   display: flex;
   list-style: none;
   padding: 0;
-}
-
-.comm-list li {
-  margin-right: 20px;
-  border-right: 1px solid #e8e8e8;
-  padding-right: 10px;
-  color: #0290ff;
-}
-
-.comm-list li:last-child {
-  border: none;
 }
 
 .bookcategory {
