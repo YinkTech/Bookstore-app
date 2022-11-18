@@ -4,10 +4,11 @@ import { BooksForm } from "./../containers/BooksForm";
 
 const App = () => {
   return (
-    <div className="App">
-      <BooksForm />
-      <BooksList />
-    </div>
+      <div className="App">
+        <BooksList />
+        <div className="separator"></div>
+        <BooksForm />
+      </div>
   );
 };
 

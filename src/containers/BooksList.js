@@ -15,16 +15,10 @@ export const BooksList = () => {
 
   return (
     <table>
-      <thead>
-        <tr>
-          <th>title</th>
-          <th>category</th>
-        </tr>
-      </thead>
-
       <tbody>
         {books.map((book) => (
             <Book
+            className='section'
             key={book.id}
             book={book}
             deleteBook={() => handleRemoveBook(book)}
