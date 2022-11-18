@@ -10,7 +10,7 @@ const SwithRoutes = () => {
     <>
         <NavBar />
         <Routes>
-            <Route path='/bookstore' element={<App />} exact />
+            <Route path='/Bookstore-app' element={<App />} exact />
             <Route path='/Category' element={<Category />} />
         </Routes>
     </>

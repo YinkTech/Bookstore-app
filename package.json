@@ -1,7 +1,7 @@
 {
   "name": "bookstore",
   "version": "0.1.0",
-  "homepage": "https://yinktech.github.io/bookstore",
+  "homepage": "https://yinktech.github.io/Bookstore-app",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.19.6",
@@ -57,6 +57,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "stylelint": "^14.15.0",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
