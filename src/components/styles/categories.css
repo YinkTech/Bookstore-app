@@ -1,0 +1,20 @@
+.cate-con {
+  padding: 10px;
+}
+
+.cate-lead {
+  color: #0290ff;
+}
+
+.cate-con ul {
+  list-style: georgian;
+  font-size: 20px;
+  font-weight: 900;
+  color: #9c9c9c;
+}
+
+.cate-con ul li {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+  color: #121212;
+}

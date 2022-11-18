@@ -1,13 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles/progress.css'
+import { Progress } from './Progress';
+import { Session } from './Session';
 
 const Book = ({ book, deleteBook, className }) => {
 return(
-  <tr key={book.id}  className={className} >
-    <td>{book.title}</td>
-    <td>{book.category}</td>
-    <td><button type="button" onClick={deleteBook}>Remove</button></td>
-  </tr>
+  <div key={book.id}  className={className} >
+    <div className='list-sec'>
+      <p className='bookcategory'>{book.category}</p>
+      <p className='booktitle'>{book.title}</p>
+      <ul className='comm-list'>
+        <li>Comments</li>
+
+        <li onClick={deleteBook}>Remove</li>
+        <li> Edit </li>
+
+        </ul>
+    </div>
+    <Progress />
+    <Session />
+
+  </div>
+  
 );
 };
 
