@@ -6,7 +6,7 @@ REACT & REDUX
 ## Live Demo
 
 [Github](https://yinktech.github.io/Bookstore-app/)
-[Heroku](https://superlative-babka-ac80ed.netlify.app/)
+[Netlify](https://superlative-babka-ac80ed.netlify.app/)
 
 ## Bookstore Page
 ![screenshot](./src/img/shot.png)
