@@ -1,7 +1,7 @@
 {
   "name": "bookstore",
   "version": "0.1.0",
-  "homepage": "https://yinktech.github.io/bookstore-app",
+  "homepage": "https://yinktech.github.io/bookstore",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.19.6",

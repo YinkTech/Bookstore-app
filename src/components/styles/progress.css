@@ -44,8 +44,8 @@
   line-height: 5em;
 }
 
-.progress-circle::after 
-{
+.progress-circle::after
+ {
   border: none;
   position: absolute;
   top: 0.35em;
