@@ -82,12 +82,12 @@ body {
   color: #0290ff;
 }
 
-.comm-list li:last-child {
-  border: none;
-}
-
 .session-check ul li {
   color: #5a5959;
+}
+
+.comm-list li:last-child {
+  border: none;
 }
 
 .session-check ul li:first-child {
