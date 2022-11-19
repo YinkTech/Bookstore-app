@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { createBook } from '../actions';
 
 const Categories = [
-  { category: "Select Category" },
+  { category: "Category" },
   { category: "Action" },
   { category: "Biography" },
   { category: "History" },
@@ -24,40 +24,46 @@ export const BooksForm = () => {
   const handleChangeCategory = (e) => categoryInput((e.target.value));
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const book = {
       id: uuidv4(),
       title,
       category,
+      complete: false,
     };
     dispatch(createBook(book));
-    e.preventDefault();
     titleInput('');
     categoryInput('');
   };
 
   return (
       <form onSubmit={handleSubmit}>
-          <label htmlFor="title">Title</label>
+        <h2 className='form-lead'>ADD NEW MOVIE</h2>
+         <div className='form-sort'>
+
+        
           <input
             id="title"
             type="text"
+            className='input-title'
+            placeholder='Movie Title'
             value={title} onChange={handleChange}
           />
 
-      <label>
-        Categories
         <select
           name="categories"
           id="categories"
+          className='input-cate'
           value={category}
           onChange={handleChangeCategory}
         >
           {Categories.map((option, index) => (
-            <option key={index}>{option.category}</option>
+            <option key={index} className='input-cat'>{option.category}</option>
           ))}
         </select>
-      </label>
-      <button type="submit">Submit</button>
+      <button type="submit" className='submit'>ADD MOVIE</button>
+
+      </div>
     </form>
   );
 };

@@ -1,17 +1,19 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import App from './components/App';
+import SwithRoutes from './components/SwithRoutes';
 import store from './store/store'
 import { Provider } from 'react-redux'
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-     <Provider store={store}>
-        <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+          <SwithRoutes />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
 );

@@ -14,23 +14,15 @@ export const BooksList = () => {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>title</th>
-          <th>category</th>
-        </tr>
-      </thead>
-
-      <tbody>
+      <div className='card-list'>
         {books.map((book) => (
             <Book
+            className='section'
             key={book.id}
             book={book}
             deleteBook={() => handleRemoveBook(book)}
           />
         ))}
-      </tbody>
-    </table>
+      </div>
   );
 };
